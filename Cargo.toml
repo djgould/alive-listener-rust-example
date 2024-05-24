@@ -1,0 +1,22 @@
+[package]
+name = "coreaudio-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+core-foundation = "0.9.4"
+coreaudio-rs = "0.12.0"
+coreaudio-sys = "0.2.15"
+hound = "3.5.1"
+libc = "0.2.155"
+log = "0.4"
+env_logger = "0.11.3"
+
+[profile.dev]
+overflow-checks = true
+opt-level = 1
+debug = true
+lto = "thin"
+panic = "unwind"
+incremental = true
+codegen-units = 1
